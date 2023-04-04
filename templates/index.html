@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+{% if sentences|length > 0 %}
+<a href="/reverse">Click here to see actual text!</a></br></br>
+<a href="/translate">Click here to Translate another text!</a>
+{% endif %}
+{% if sentences|length == 0 %}
+    <p> There are no sentences right now!, <a href="/translate">Click here to ADD!</a></p>
+{% else %}
+    <h1> Transferred sentences using ubby translator</h1> 
+    <ul>
+        {% for sentence in sentences %}
+            <li> {{ sentence[0] }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<h1> Enter the sentence for ubby translator</h1>
+<form action="/translate" method="post">
+    <textarea  name="text" rows="4" cols="50" maxlength="200" required>
+    </textarea><br/>
+    <input type="submit" value="Submit"/>
+</form>
+{% endblock %}
